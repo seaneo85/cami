@@ -71,3 +71,14 @@ probably best not to use it. I mean, were you going to anyway? */
 }
 
 
+/*********************
+IMAGE REPLACEMENT
+*********************/
+
+@mixin hide-text{
+    overflow:hidden;
+    text-indent:-9000px;
+    display:block;
+}
+
+

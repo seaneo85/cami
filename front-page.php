@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- PAGE.PHP-->
+<!-- FRONT-PAGE.PHP -->
 
 			<div id="content">
 

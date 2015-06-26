@@ -149,6 +149,9 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+/*********************
+IMAGE REPLACEMENT
+*********************/
 /******************************************************************
 Site Name:
 Author:
@@ -312,10 +315,10 @@ NAVIGATION STYLES
 }
 /* line 59, ../scss/breakpoints/_768up.scss */
 .nav li a:hover, .nav li a:focus {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
-/* line 72, ../scss/breakpoints/_768up.scss */
+/* line 71, ../scss/breakpoints/_768up.scss */
 .nav li ul.sub-menu,
 .nav li ul.children {
   margin-top: 0;

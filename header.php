@@ -71,7 +71,18 @@
 						)); ?>
 
 					</nav>
-
+					
+					
 				</div>
+				
+				<?php if( is_home() || is_front_page() ) :
+					if ( has_post_thumbnail() ) { ?>
+					
+						<div id="hero">
+						<?php echo get_the_post_thumbnail( $post_id, 'full' );?>
+						<div class="wrap"><h2 id="description"><?php echo get_bloginfo ( 'description' );  ?></h2></div>
+						</div>
+					<?php }
+				endif; ?>
 
 			</header>
