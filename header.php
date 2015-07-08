@@ -49,12 +49,10 @@
 				<div id="inner-header" class="wrap cf">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					<p id="logo" class="h1 m-all t-2of3 d-2of3" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
-
-
+					<?php get_sidebar('header'); ?>
+					<p id="mobile-nav"><a href="#menu"><i class="fa fa-bars"></i>MENU</a></p>
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
@@ -80,7 +78,19 @@
 					
 						<div id="hero">
 						<?php echo get_the_post_thumbnail( $post_id, 'full' );?>
-						<div class="wrap"><h2 id="description"><?php echo get_bloginfo ( 'description' );  ?></h2></div>
+						<div id="description">
+							<div class="wrap">
+							<?php 
+								$my_postid = 1;//This is page id or post id
+								$content_post = get_post($my_postid);
+								$content = $content_post->post_content;
+								$content = apply_filters('the_content', $content);
+								$content = str_replace(']]>', ']]&gt;', $content);
+								echo $content;
+
+							?>
+							</div>
+						</div>
 						</div>
 					<?php }
 				endif; ?>

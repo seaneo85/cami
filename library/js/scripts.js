@@ -110,6 +110,11 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
+$( "#mobile-nav" ).click(function() {
+  $( 'nav[role="navigation"' ).slideToggle( "slow" );
+});
+
+
   /*
    * Let's fire off the gravatar function
    * You can remove this if you don't need it

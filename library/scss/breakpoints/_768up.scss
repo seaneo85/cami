@@ -31,13 +31,30 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+		
+	.widget {
+		border: 0;
+	}
+	
+	.contact {
+		text-align: right;
+	}
+}
 
 	#logo {}
 
 /*********************
 NAVIGATION STYLES
 *********************/
+
+#mobile-nav {
+	display: none !important;
+}
+
+nav {
+	display: block !important;
+}
 
 .nav {
 	border: 0;

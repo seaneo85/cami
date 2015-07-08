@@ -101,6 +101,15 @@ a, a:visited {
 		*/
 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
 	}
+	
+	&.button {
+		display: inline-block;
+		background-color: #f01d4f;
+		color: white;
+		padding: 3px;
+		text-decoration: none;
+		margin-bottom: 20px;
+	}
 }
 
 /******************************************************************
@@ -154,7 +163,48 @@ HEADER STYLES
 
 .header {
 	background-color: $black;
-}
+	
+	.sidebar {
+		margin: 0;
+	}
+	
+	.widget {
+		margin: 0;
+		border-top: 1px solid rgba(81, 88, 96, 1);
+		padding: 15px 0 0;
+	}
+	
+	.widgettitle {
+		display: none;
+	}
+	
+	.contact {
+		width: 100%;
+		text-align: center;
+		margin: 0 0 10px 0;
+		color: rgba(196, 198, 201, 1);
+		
+		li {
+			display: inline;
+		}
+		
+		li:last-child p:after {
+			content: "";
+		}
+		
+		p {
+			margin-right: 10px;
+			text-align: right;
+			display: inline;
+			
+			&:after {
+				content: "/";
+				margin-left: 10px;
+			} /* end after */
+			
+		} /* end p */
+	} /* end .contact */
+} /* end .header */
 
 	#logo {
 		  margin: 0;
@@ -181,19 +231,18 @@ HEADER STYLES
 			height: auto;
 		}
 		
-		.wrap {
-			height: 0;
-		}
-		
 		#description {
 			position: absolute;
 			top: 0;
 			color: white;
 			background-color: rgba(0, 0, 0, 0.5);
 			width: 100%;
-			font-size: 1.5em;
 			padding: 7px;
-			margin: 0;
+			margin: 10px 0;
+		}
+		
+		h2 {
+			margin-top: 0;
 		}
 	}
 
@@ -209,75 +258,102 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
-.nav {
-	border-bottom: 0;
-	margin: 0;
-
-	li {
-
+#mobile-nav {
+    text-align: center;
+    width: 100%;
+    background-color: #252D38;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 10px 0;
+    border-top: 2px solid rgb(27, 32, 40);
+	float: left;
+	
 		a {
-			display: block;
-			color: $white;
+			color: white;
 			text-decoration: none;
-			padding: 0.75em;
+			font-size: 1.5em;
+			font-weight: 100;
+			display: inline-block;
+			float: left;
+			width: 100%;
+		}
+}
+
+nav {
+	display: none;
+	margin: 0;
+	width: 100%;
+	float: left;
+}
+
+	.nav {
+		border-bottom: 0;
+
+		li {
+
+			a {
+				display: block;
+				color: $white;
+				text-decoration: none;
+				padding: 0.75em;
+
+				/*
+				remember this is for mobile ONLY, so there's no need
+				to even declare hover styles here, you can do it in
+				the style.scss file where it's relevant. We want to
+				keep this file as small as possible!
+				*/
+				&:hover, &:focus {
+
+				}
+			}
+
+			&:first-child {}
+
+			&:last-child {}
 
 			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
+			so you really have to rethink your dropdowns for mobile.
+			you don't want to have it expand too much because the
+			screen is so small. How you manage your menu should
+			depend on the project. Here's some great info on it:
+			http://www.alistapart.com/articles/organizing-mobile/
 			*/
-			&:hover, &:focus {
+			ul.sub-menu,
+			ul.children {
 
-			}
-		}
+				li {
 
-		&:first-child {}
+					a {
+						padding-left: 30px;
 
-		&:last-child {}
+						&:hover,
+						&:focus {}
 
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
-		ul.sub-menu,
-		ul.children {
+						&:link {}
 
-			li {
+					}
 
-				a {
-					padding-left: 30px;
+					&:first-child {}
 
-					&:hover,
-					&:focus {}
-
-					&:link {}
+					&:last-child {}
 
 				}
 
-				&:first-child {}
-
-				&:last-child {}
-
 			}
 
-		}
+		} /* end .menu li */
 
-	} /* end .menu li */
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
 
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
+			a {}
 
-		a {}
+		}  /* end current highlighters */
 
-	}  /* end current highlighters */
-
-} /* end .nav */
+	} /* end .nav */
 
 
 /*********************
