@@ -19,6 +19,18 @@ GENERAL STYLES
 
 body {}
 
+#main {
+	pading-right: 2em;
+}
+
+.hentry {
+	
+	footer {
+		
+		border: 0;
+	}
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -43,6 +55,15 @@ HEADER STYLES
 }
 
 	#logo {}
+	
+	#hero {
+		padding-bottom: 10px;
+	
+		#description {
+			position: absolute;
+			margin: 10px 0;
+		}
+	}
 
 /*********************
 NAVIGATION STYLES
@@ -163,7 +184,7 @@ SIDEBARS & ASIDES
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
+		border-bottom: 1px solid $blue;
 		margin-bottom: 0.75em;
 	}
 

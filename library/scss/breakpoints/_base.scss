@@ -20,7 +20,6 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -71,7 +70,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	max-width: 92%;
 	margin: 0 auto;
 }
 
@@ -163,6 +162,8 @@ HEADER STYLES
 
 .header {
 	background-color: $black;
+	float: left;
+	width: 100%;
 	
 	.sidebar {
 		margin: 0;
@@ -229,16 +230,19 @@ HEADER STYLES
 		img {
 			width: 100%;
 			height: auto;
+			vertical-align: top;
 		}
 		
 		#description {
-			position: absolute;
-			top: 0;
+			bottom: 0;
 			color: white;
 			background-color: rgba(0, 0, 0, 0.5);
 			width: 100%;
 			padding: 7px;
-			margin: 10px 0;
+			margin: 0 0 10px 0;
+			
+			position: static;
+			display: block;
 		}
 		
 		h2 {
@@ -362,22 +366,21 @@ POSTS & CONTENT STYLES
 
 #content {
 	margin-top: 1.5em;
+	float: left;
+	width: 100%;
 }
 
 		.hentry {
-			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
 
 			header {
 				border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
+				padding-bottom: 0;
+				padding-top: 1.5em;
 			}
 
 			footer {
 				padding: 1.5em;
-				border-top: 1px solid $light-gray;
+				border-top: 1px solid $blue;
 
 				p {
 					margin: 0;
@@ -421,7 +424,7 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
+			padding-top: 1.5em;
 
 			p {
 				margin: 0 0 1.5em;
@@ -930,10 +933,13 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+#content {
 
-.sidebar {}
+	.sidebar {}
 
-	.widgettitle {}
+	.widgettitle {
+		margin-top: 0;
+	}
 
 	.widget {
 
@@ -943,7 +949,7 @@ SIDEBARS & ASIDES
 
 				&:first-child {}
 
-				&:last-child {}
+				&:last-child {}	
 
 				a {}
 
@@ -953,7 +959,14 @@ SIDEBARS & ASIDES
 			}
 
 		}
-
+		
+		.contact {
+			margin: 0;
+		
+			li p {
+			margin: 0 0 10px 0;
+			}
+		}
 	}
 
 	.no-widgets {
@@ -964,6 +977,7 @@ SIDEBARS & ASIDES
 		border-radius: 2px;
 		margin-bottom: 1.5em;
 	}
+}
 
 /*********************
 FOOTER STYLES
@@ -973,6 +987,13 @@ FOOTER STYLES
 	clear: both;
 	background-color: $black;
 	color: $light-gray;
+	margin-top: 50px;
+	float: left;
+	width: 100%;
+	
+	nav {
+		display: block;
+	}
 }
 
 	/*
