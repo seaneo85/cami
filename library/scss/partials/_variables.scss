@@ -17,13 +17,15 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 
-$alert-yellow:      #ebe16f;
-$alert-red:         #fbe3e4;
-$alert-green:       #e6efc2;
-$alert-blue:        #d5edf8;
-
-$black:             #323944;
+$black:             #000;
 $white:             #fff;
+
+
+$blue-blue: #517398;
+$light-blue: #e3ebf0;
+
+$pink: #fe606e;
+
 
 $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
@@ -37,12 +39,10 @@ $green:             #7dd667;
 $bones-pink:        #f01d4f;
 $blue:              #2980b9;
 
-$link-color:        $bones-pink;
+$link-color:        $blue;
 $link-hover:        darken($link-color, 9%);
 
 $border-color:      #ccc;
-$disabled-gray:     #cfcfcf;
-
 
 /*
 Here's a great tutorial on how to
