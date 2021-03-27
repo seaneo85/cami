@@ -1988,7 +1988,7 @@ POSTS & CONTENT STYLES
 }
 /* line 577, ../scss/breakpoints/_base.scss */
 .entry-content tr:nth-child(even) {
-  background-color: #b6b6b6;
+  background-color: #efefef;
 }
 /* line 582, ../scss/breakpoints/_base.scss */
 .entry-content td {
@@ -2684,7 +2684,7 @@ you can add resource intensive styles.
   /* line 98, ../scss/breakpoints/_768up.scss */
   #hero #description {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.75);
     padding-bottom: 57px;
   }
   /* line 105, ../scss/breakpoints/_768up.scss */
