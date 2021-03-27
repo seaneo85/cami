@@ -222,7 +222,7 @@ pre {
  */
 /* line 205, ../scss/partials/_normalize.scss */
 q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+  quotes: '\201C''\201D''\2018''\2019';
 }
 
 /**
@@ -236,7 +236,8 @@ q:after {
 }
 
 /* line 218, ../scss/partials/_normalize.scss */
-small, .small {
+small,
+.small {
   font-size: 75%;
 }
 
@@ -410,9 +411,9 @@ select {
  */
 /* line 386, ../scss/partials/_normalize.scss */
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -433,8 +434,8 @@ html input[disabled] {
  * 2. Remove excess padding in IE 8/9/10.
  */
 /* line 408, ../scss/partials/_normalize.scss */
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -447,7 +448,7 @@ input[type="radio"] {
  *    (include `-moz` to future-proof).
  */
 /* line 420, ../scss/partials/_normalize.scss */
-input[type="search"] {
+input[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
@@ -461,8 +462,8 @@ input[type="search"] {
  * on OS X.
  */
 /* line 432, ../scss/partials/_normalize.scss */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -516,16 +517,25 @@ table {
 }
 
 /* line 487, ../scss/partials/_normalize.scss */
-.clearfix, .cf, .comment-respond {
+.clearfix,
+.cf,
+.comment-respond {
   zoom: 1;
 }
 /* line 489, ../scss/partials/_normalize.scss */
-.clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
-  content: "";
+.clearfix:before,
+.clearfix:after,
+.cf:before,
+.comment-respond:before,
+.cf:after,
+.comment-respond:after {
+  content: '';
   display: table;
 }
 /* line 490, ../scss/partials/_normalize.scss */
-.clearfix:after, .cf:after, .comment-respond:after {
+.clearfix:after,
+.cf:after,
+.comment-respond:after {
   clear: both;
 }
 
@@ -535,7 +545,7 @@ http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
 /* line 497, ../scss/partials/_normalize.scss */
 span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif !important;
   font-style: italic;
 }
 
@@ -622,11 +632,11 @@ p {
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
   hyphenate-lines: 3;
-  -webkit-font-feature-settings: "liga", "dlig";
-  -moz-font-feature-settings: "liga=1, dlig=1";
-  -ms-font-feature-settings: "liga", "dlig";
-  -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: 'liga', 'dlig';
+  -moz-font-feature-settings: 'liga=1, dlig=1';
+  -ms-font-feature-settings: 'liga', 'dlig';
+  -o-font-feature-settings: 'liga', 'dlig';
+  font-feature-settings: 'liga', 'dlig';
 }
 
 /******************************************************************
@@ -1062,10 +1072,12 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
 /* line 27, ../scss/modules/_buttons.scss */
-.blue-btn, .comment-reply-link, #submit {
+.blue-btn,
+.comment-reply-link,
+#submit {
   display: inline-block;
   position: relative;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
   font-size: 0.9em;
@@ -1080,13 +1092,20 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   transition: background-color 0.14s ease-in-out;
 }
 /* line 45, ../scss/modules/_buttons.scss */
-.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+.blue-btn:hover,
+.comment-reply-link:hover,
+#submit:hover,
+.blue-btn:focus,
+.comment-reply-link:focus,
+#submit:focus {
   color: #fff;
   text-decoration: none;
   outline: none;
 }
 /* line 52, ../scss/modules/_buttons.scss */
-.blue-btn:active, .comment-reply-link:active, #submit:active {
+.blue-btn:active,
+.comment-reply-link:active,
+#submit:active {
   top: 1px;
 }
 
@@ -1096,15 +1115,24 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 /* line 63, ../scss/modules/_buttons.scss */
-.blue-btn, .comment-reply-link, #submit {
-  background-color: #2196F3;
+.blue-btn,
+.comment-reply-link,
+#submit {
+  background-color: #2196f3;
 }
 /* line 67, ../scss/modules/_buttons.scss */
-.blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+.blue-btn:hover,
+.comment-reply-link:hover,
+#submit:hover,
+.blue-btn:focus,
+.comment-reply-link:focus,
+#submit:focus {
   background-color: #0e8df2;
 }
 /* line 72, ../scss/modules/_buttons.scss */
-.blue-btn:active, .comment-reply-link:active, #submit:active {
+.blue-btn:active,
+.comment-reply-link:active,
+#submit:active {
   background-color: #0d8aee;
 }
 
@@ -1129,20 +1157,20 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 INPUTS
 *********************/
 /* line 24, ../scss/modules/_forms.scss */
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
+input[type='text'],
+input[type='password'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input[type='color'],
 select,
 textarea,
 .field {
@@ -1159,39 +1187,40 @@ textarea,
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #727272;
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out;
 }
 /* line 59, ../scss/modules/_forms.scss */
-input[type="text"]:focus, input[type="text"]:active,
-input[type="password"]:focus,
-input[type="password"]:active,
-input[type="datetime"]:focus,
-input[type="datetime"]:active,
-input[type="datetime-local"]:focus,
-input[type="datetime-local"]:active,
-input[type="date"]:focus,
-input[type="date"]:active,
-input[type="month"]:focus,
-input[type="month"]:active,
-input[type="time"]:focus,
-input[type="time"]:active,
-input[type="week"]:focus,
-input[type="week"]:active,
-input[type="number"]:focus,
-input[type="number"]:active,
-input[type="email"]:focus,
-input[type="email"]:active,
-input[type="url"]:focus,
-input[type="url"]:active,
-input[type="search"]:focus,
-input[type="search"]:active,
-input[type="tel"]:focus,
-input[type="tel"]:active,
-input[type="color"]:focus,
-input[type="color"]:active,
+input[type='text']:focus,
+input[type='text']:active,
+input[type='password']:focus,
+input[type='password']:active,
+input[type='datetime']:focus,
+input[type='datetime']:active,
+input[type='datetime-local']:focus,
+input[type='datetime-local']:active,
+input[type='date']:focus,
+input[type='date']:active,
+input[type='month']:focus,
+input[type='month']:active,
+input[type='time']:focus,
+input[type='time']:active,
+input[type='week']:focus,
+input[type='week']:active,
+input[type='number']:focus,
+input[type='number']:active,
+input[type='email']:focus,
+input[type='email']:active,
+input[type='url']:focus,
+input[type='url']:active,
+input[type='search']:focus,
+input[type='search']:active,
+input[type='tel']:focus,
+input[type='tel']:active,
+input[type='color']:focus,
+input[type='color']:active,
 select:focus,
 select:active,
 textarea:focus,
@@ -1202,33 +1231,34 @@ textarea:active,
   outline: none;
 }
 /* line 66, ../scss/modules/_forms.scss */
-input[type="text"].error, input[type="text"].is-invalid,
-input[type="password"].error,
-input[type="password"].is-invalid,
-input[type="datetime"].error,
-input[type="datetime"].is-invalid,
-input[type="datetime-local"].error,
-input[type="datetime-local"].is-invalid,
-input[type="date"].error,
-input[type="date"].is-invalid,
-input[type="month"].error,
-input[type="month"].is-invalid,
-input[type="time"].error,
-input[type="time"].is-invalid,
-input[type="week"].error,
-input[type="week"].is-invalid,
-input[type="number"].error,
-input[type="number"].is-invalid,
-input[type="email"].error,
-input[type="email"].is-invalid,
-input[type="url"].error,
-input[type="url"].is-invalid,
-input[type="search"].error,
-input[type="search"].is-invalid,
-input[type="tel"].error,
-input[type="tel"].is-invalid,
-input[type="color"].error,
-input[type="color"].is-invalid,
+input[type='text'].error,
+input[type='text'].is-invalid,
+input[type='password'].error,
+input[type='password'].is-invalid,
+input[type='datetime'].error,
+input[type='datetime'].is-invalid,
+input[type='datetime-local'].error,
+input[type='datetime-local'].is-invalid,
+input[type='date'].error,
+input[type='date'].is-invalid,
+input[type='month'].error,
+input[type='month'].is-invalid,
+input[type='time'].error,
+input[type='time'].is-invalid,
+input[type='week'].error,
+input[type='week'].is-invalid,
+input[type='number'].error,
+input[type='number'].is-invalid,
+input[type='email'].error,
+input[type='email'].is-invalid,
+input[type='url'].error,
+input[type='url'].is-invalid,
+input[type='search'].error,
+input[type='search'].is-invalid,
+input[type='tel'].error,
+input[type='tel'].is-invalid,
+input[type='color'].error,
+input[type='color'].is-invalid,
 select.error,
 select.is-invalid,
 textarea.error,
@@ -1244,33 +1274,34 @@ textarea.is-invalid,
   outline-color: red;
 }
 /* line 78, ../scss/modules/_forms.scss */
-input[type="text"].success, input[type="text"].is-valid,
-input[type="password"].success,
-input[type="password"].is-valid,
-input[type="datetime"].success,
-input[type="datetime"].is-valid,
-input[type="datetime-local"].success,
-input[type="datetime-local"].is-valid,
-input[type="date"].success,
-input[type="date"].is-valid,
-input[type="month"].success,
-input[type="month"].is-valid,
-input[type="time"].success,
-input[type="time"].is-valid,
-input[type="week"].success,
-input[type="week"].is-valid,
-input[type="number"].success,
-input[type="number"].is-valid,
-input[type="email"].success,
-input[type="email"].is-valid,
-input[type="url"].success,
-input[type="url"].is-valid,
-input[type="search"].success,
-input[type="search"].is-valid,
-input[type="tel"].success,
-input[type="tel"].is-valid,
-input[type="color"].success,
-input[type="color"].is-valid,
+input[type='text'].success,
+input[type='text'].is-valid,
+input[type='password'].success,
+input[type='password'].is-valid,
+input[type='datetime'].success,
+input[type='datetime'].is-valid,
+input[type='datetime-local'].success,
+input[type='datetime-local'].is-valid,
+input[type='date'].success,
+input[type='date'].is-valid,
+input[type='month'].success,
+input[type='month'].is-valid,
+input[type='time'].success,
+input[type='time'].is-valid,
+input[type='week'].success,
+input[type='week'].is-valid,
+input[type='number'].success,
+input[type='number'].is-valid,
+input[type='email'].success,
+input[type='email'].is-valid,
+input[type='url'].success,
+input[type='url'].is-valid,
+input[type='search'].success,
+input[type='search'].is-valid,
+input[type='tel'].success,
+input[type='tel'].is-valid,
+input[type='color'].success,
+input[type='color'].is-valid,
 select.success,
 select.is-valid,
 textarea.success,
@@ -1286,33 +1317,34 @@ textarea.is-valid,
   outline-color: green;
 }
 /* line 90, ../scss/modules/_forms.scss */
-input[type="text"][disabled], input[type="text"].is-disabled,
-input[type="password"][disabled],
-input[type="password"].is-disabled,
-input[type="datetime"][disabled],
-input[type="datetime"].is-disabled,
-input[type="datetime-local"][disabled],
-input[type="datetime-local"].is-disabled,
-input[type="date"][disabled],
-input[type="date"].is-disabled,
-input[type="month"][disabled],
-input[type="month"].is-disabled,
-input[type="time"][disabled],
-input[type="time"].is-disabled,
-input[type="week"][disabled],
-input[type="week"].is-disabled,
-input[type="number"][disabled],
-input[type="number"].is-disabled,
-input[type="email"][disabled],
-input[type="email"].is-disabled,
-input[type="url"][disabled],
-input[type="url"].is-disabled,
-input[type="search"][disabled],
-input[type="search"].is-disabled,
-input[type="tel"][disabled],
-input[type="tel"].is-disabled,
-input[type="color"][disabled],
-input[type="color"].is-disabled,
+input[type='text'][disabled],
+input[type='text'].is-disabled,
+input[type='password'][disabled],
+input[type='password'].is-disabled,
+input[type='datetime'][disabled],
+input[type='datetime'].is-disabled,
+input[type='datetime-local'][disabled],
+input[type='datetime-local'].is-disabled,
+input[type='date'][disabled],
+input[type='date'].is-disabled,
+input[type='month'][disabled],
+input[type='month'].is-disabled,
+input[type='time'][disabled],
+input[type='time'].is-disabled,
+input[type='week'][disabled],
+input[type='week'].is-disabled,
+input[type='number'][disabled],
+input[type='number'].is-disabled,
+input[type='email'][disabled],
+input[type='email'].is-disabled,
+input[type='url'][disabled],
+input[type='url'].is-disabled,
+input[type='search'][disabled],
+input[type='search'].is-disabled,
+input[type='tel'][disabled],
+input[type='tel'].is-disabled,
+input[type='color'][disabled],
+input[type='color'].is-disabled,
 select[disabled],
 select.is-disabled,
 textarea[disabled],
@@ -1324,59 +1356,62 @@ textarea.is-disabled,
   opacity: 0.6;
 }
 /* line 96, ../scss/modules/_forms.scss */
-input[type="text"][disabled]:focus, input[type="text"][disabled]:active, input[type="text"].is-disabled:focus, input[type="text"].is-disabled:active,
-input[type="password"][disabled]:focus,
-input[type="password"][disabled]:active,
-input[type="password"].is-disabled:focus,
-input[type="password"].is-disabled:active,
-input[type="datetime"][disabled]:focus,
-input[type="datetime"][disabled]:active,
-input[type="datetime"].is-disabled:focus,
-input[type="datetime"].is-disabled:active,
-input[type="datetime-local"][disabled]:focus,
-input[type="datetime-local"][disabled]:active,
-input[type="datetime-local"].is-disabled:focus,
-input[type="datetime-local"].is-disabled:active,
-input[type="date"][disabled]:focus,
-input[type="date"][disabled]:active,
-input[type="date"].is-disabled:focus,
-input[type="date"].is-disabled:active,
-input[type="month"][disabled]:focus,
-input[type="month"][disabled]:active,
-input[type="month"].is-disabled:focus,
-input[type="month"].is-disabled:active,
-input[type="time"][disabled]:focus,
-input[type="time"][disabled]:active,
-input[type="time"].is-disabled:focus,
-input[type="time"].is-disabled:active,
-input[type="week"][disabled]:focus,
-input[type="week"][disabled]:active,
-input[type="week"].is-disabled:focus,
-input[type="week"].is-disabled:active,
-input[type="number"][disabled]:focus,
-input[type="number"][disabled]:active,
-input[type="number"].is-disabled:focus,
-input[type="number"].is-disabled:active,
-input[type="email"][disabled]:focus,
-input[type="email"][disabled]:active,
-input[type="email"].is-disabled:focus,
-input[type="email"].is-disabled:active,
-input[type="url"][disabled]:focus,
-input[type="url"][disabled]:active,
-input[type="url"].is-disabled:focus,
-input[type="url"].is-disabled:active,
-input[type="search"][disabled]:focus,
-input[type="search"][disabled]:active,
-input[type="search"].is-disabled:focus,
-input[type="search"].is-disabled:active,
-input[type="tel"][disabled]:focus,
-input[type="tel"][disabled]:active,
-input[type="tel"].is-disabled:focus,
-input[type="tel"].is-disabled:active,
-input[type="color"][disabled]:focus,
-input[type="color"][disabled]:active,
-input[type="color"].is-disabled:focus,
-input[type="color"].is-disabled:active,
+input[type='text'][disabled]:focus,
+input[type='text'][disabled]:active,
+input[type='text'].is-disabled:focus,
+input[type='text'].is-disabled:active,
+input[type='password'][disabled]:focus,
+input[type='password'][disabled]:active,
+input[type='password'].is-disabled:focus,
+input[type='password'].is-disabled:active,
+input[type='datetime'][disabled]:focus,
+input[type='datetime'][disabled]:active,
+input[type='datetime'].is-disabled:focus,
+input[type='datetime'].is-disabled:active,
+input[type='datetime-local'][disabled]:focus,
+input[type='datetime-local'][disabled]:active,
+input[type='datetime-local'].is-disabled:focus,
+input[type='datetime-local'].is-disabled:active,
+input[type='date'][disabled]:focus,
+input[type='date'][disabled]:active,
+input[type='date'].is-disabled:focus,
+input[type='date'].is-disabled:active,
+input[type='month'][disabled]:focus,
+input[type='month'][disabled]:active,
+input[type='month'].is-disabled:focus,
+input[type='month'].is-disabled:active,
+input[type='time'][disabled]:focus,
+input[type='time'][disabled]:active,
+input[type='time'].is-disabled:focus,
+input[type='time'].is-disabled:active,
+input[type='week'][disabled]:focus,
+input[type='week'][disabled]:active,
+input[type='week'].is-disabled:focus,
+input[type='week'].is-disabled:active,
+input[type='number'][disabled]:focus,
+input[type='number'][disabled]:active,
+input[type='number'].is-disabled:focus,
+input[type='number'].is-disabled:active,
+input[type='email'][disabled]:focus,
+input[type='email'][disabled]:active,
+input[type='email'].is-disabled:focus,
+input[type='email'].is-disabled:active,
+input[type='url'][disabled]:focus,
+input[type='url'][disabled]:active,
+input[type='url'].is-disabled:focus,
+input[type='url'].is-disabled:active,
+input[type='search'][disabled]:focus,
+input[type='search'][disabled]:active,
+input[type='search'].is-disabled:focus,
+input[type='search'].is-disabled:active,
+input[type='tel'][disabled]:focus,
+input[type='tel'][disabled]:active,
+input[type='tel'].is-disabled:focus,
+input[type='tel'].is-disabled:active,
+input[type='color'][disabled]:focus,
+input[type='color'][disabled]:active,
+input[type='color'].is-disabled:focus,
+input[type='color'].is-disabled:active,
 select[disabled]:focus,
 select[disabled]:active,
 select.is-disabled:focus,
@@ -1393,7 +1428,7 @@ textarea.is-disabled:active,
 }
 
 /* line 106, ../scss/modules/_forms.scss */
-input[type="password"] {
+input[type='password'] {
   letter-spacing: 0.3em;
 }
 
@@ -1438,7 +1473,7 @@ GENERAL STYLES
 *********************/
 /* line 18, ../scss/breakpoints/_base.scss */
 body {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5em;
   color: #212121;
@@ -1454,59 +1489,47 @@ style a page via class
 ********************/
 /* for sites that are read right to left (i.e. hebrew) */
 /* line 41, ../scss/breakpoints/_base.scss */
-.home .content-column ul {
+.content-column ul {
   list-style-type: none;
   padding-left: 5px;
 }
 /* line 48, ../scss/breakpoints/_base.scss */
-.home .content-column ul.icons {
+ul.icons {
   list-style-type: none;
   padding-left: 5px;
 }
 /* line 52, ../scss/breakpoints/_base.scss */
-.home .content-column ul.icons li {
+ul.icons li {
   position: relative;
   margin-left: 30px;
 }
 /* line 57, ../scss/breakpoints/_base.scss */
-.home .content-column ul.icons li .fa {
+ul.icons li .fa {
   margin-right: 10px;
-  color: #2196F3;
+  color: #2196f3;
   position: absolute;
   left: -30px;
   top: 4px;
 }
 /* line 69, ../scss/breakpoints/_base.scss */
-.home .content-column ul.icons.red li .fa {
+ul.icons.red li .fa {
   color: #ff5252;
 }
-/* line 75, ../scss/breakpoints/_base.scss */
-.home .services .content-column {
-  background-color: white;
-  padding: 0 0 15px;
-  border: 1px solid #b6b6b6;
-  box-shadow: 2px 0px 4px #E6E6E6;
-}
-/* line 82, ../scss/breakpoints/_base.scss */
-.home .services-content {
-  padding: 0 15px 0;
-  margin-top: -10px;
-}
 /* line 87, ../scss/breakpoints/_base.scss */
-.home .services-content p {
+.services-content p {
   margin-bottom: 10px;
 }
 /* line 91, ../scss/breakpoints/_base.scss */
-.home .services-content ul.icons {
+.services-content ul.icons {
   margin-top: 0;
   margin-bottom: 0;
 }
 /* line 96, ../scss/breakpoints/_base.scss */
-.home .services-content ul.icons .services-content ul.icons li {
+.services-content ul.icons .services-content ul.icons li {
   font-weight: 500;
 }
 /* line 102, ../scss/breakpoints/_base.scss */
-.home .contact {
+.contact {
   margin: 0;
 }
 
@@ -1557,18 +1580,23 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 /* line 154, ../scss/breakpoints/_base.scss */
-a, a:visited {
-  color: #2196F3;
+a,
+a:visited {
+  color: #2196f3;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
 /* line 158, ../scss/breakpoints/_base.scss */
-a:hover, a:focus, a:visited:hover, a:visited:focus {
+a:hover,
+a:focus,
+a:visited:hover,
+a:visited:focus {
   color: #0c7fda;
 }
 /* line 168, ../scss/breakpoints/_base.scss */
-a:link, a:visited:link {
+a:link,
+a:visited:link {
   /*
   this highlights links on iPhones/iPads.
   so it basically works like the :hover selector
@@ -1577,7 +1605,8 @@ a:link, a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 /* line 177, ../scss/breakpoints/_base.scss */
-a.button, a:visited.button {
+a.button,
+a:visited.button {
   display: inline-block;
   background-color: #ff5252;
   color: white;
@@ -1589,7 +1618,8 @@ a.button, a:visited.button {
   transition: all 0.2s ease-in-out;
 }
 /* line 187, ../scss/breakpoints/_base.scss */
-a.button:hover, a:visited.button:hover {
+a.button:hover,
+a:visited.button:hover {
   background-color: #ff8080;
 }
 
@@ -1597,7 +1627,16 @@ a.button:hover, a:visited.button:hover {
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 /* line 199, ../scss/breakpoints/_base.scss */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
   color: #212121;
@@ -1608,36 +1647,50 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   /* removing text decoration from all headline links */
 }
 /* line 209, ../scss/breakpoints/_base.scss */
-h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a,
+h5 a,
+.h5 a {
   text-decoration: none;
 }
 
 /* line 214, ../scss/breakpoints/_base.scss */
-h1, .h1 {
+h1,
+.h1 {
   font-size: 2em;
   line-height: 1.333em;
 }
 
 /* line 219, ../scss/breakpoints/_base.scss */
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.5em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
 }
 
 /* line 225, ../scss/breakpoints/_base.scss */
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.125em;
 }
 
 /* line 229, ../scss/breakpoints/_base.scss */
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.1em;
   font-weight: 700;
 }
 
 /* line 234, ../scss/breakpoints/_base.scss */
-h5, .h5 {
+h5,
+.h5 {
   font-size: 0.846em;
   line-height: 2.09em;
   text-transform: uppercase;
@@ -1648,7 +1701,7 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 /* line 245, ../scss/breakpoints/_base.scss */
-header.header[roler="banner"] {
+header.header[roler='banner'] {
   margin-bottom: 0;
 }
 
@@ -1662,7 +1715,7 @@ header.header[roler="banner"] {
 }
 /* line 255, ../scss/breakpoints/_base.scss */
 .header #sidebar-header-container {
-  border-bottom: 1px solid #B6B6B6;
+  border-bottom: 1px solid #b6b6b6;
 }
 /* line 259, ../scss/breakpoints/_base.scss */
 .header .sidebar {
@@ -1691,7 +1744,7 @@ header.header[roler="banner"] {
 }
 /* line 282, ../scss/breakpoints/_base.scss */
 .header .contact li:last-child p:after {
-  content: "";
+  content: '';
 }
 /* line 286, ../scss/breakpoints/_base.scss */
 .header .contact p {
@@ -1702,7 +1755,7 @@ header.header[roler="banner"] {
 }
 /* line 291, ../scss/breakpoints/_base.scss */
 .header .contact p:after {
-  content: "/";
+  content: '/';
   margin-left: 10px;
 }
 
@@ -1710,7 +1763,7 @@ header.header[roler="banner"] {
 /* line 300, ../scss/breakpoints/_base.scss */
 #logo {
   margin: 15px auto;
-  background-image: url("../images/hope-center-logo.png");
+  background-image: url('../images/hope-center-logo.png');
   background-repeat: no-repeat;
   /* background-size: 90px; */
   height: 116px;
@@ -1726,7 +1779,7 @@ header.header[roler="banner"] {
   display: block;
   padding-top: 15px;
   font-size: 1.75em;
-  font-family: "Cookie";
+  font-family: 'Cookie';
   font: 0/0 serif;
   text-shadow: none;
   color: transparent;
@@ -1740,8 +1793,8 @@ header.header[roler="banner"] {
   float: left;
   width: 100%;
   margin-top: 10px;
-  border-top: 5px solid #2196F3;
-  border-bottom: 5px solid #2196F3;
+  border-top: 5px solid #2196f3;
+  border-bottom: 5px solid #2196f3;
 }
 /* line 335, ../scss/breakpoints/_base.scss */
 #hero img {
@@ -1797,7 +1850,7 @@ and more scalable.
 }
 
 /* line 389, ../scss/breakpoints/_base.scss */
-nav[role="navigation"] {
+nav[role='navigation'] {
   display: none;
   margin: 0;
   width: 100%;
@@ -1805,14 +1858,14 @@ nav[role="navigation"] {
 }
 
 /* line 396, ../scss/breakpoints/_base.scss */
-nav[role="navigation"] .nav {
+nav[role='navigation'] .nav {
   border-bottom: 0;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */
 }
 /* line 399, ../scss/breakpoints/_base.scss */
-nav[role="navigation"] .nav li {
+nav[role='navigation'] .nav li {
   /*
   so you really have to rethink your dropdowns for mobile.
   you don't want to have it expand too much because the
@@ -1822,13 +1875,13 @@ nav[role="navigation"] .nav li {
   */
 }
 /* line 401, ../scss/breakpoints/_base.scss */
-nav[role="navigation"] .nav li a {
+nav[role='navigation'] .nav li a {
   display: block;
-  color: #2196F3;
+  color: #2196f3;
   text-decoration: none;
   padding: 0.75em;
   font-weight: 400;
-  border-bottom: 1px solid #B6B6B6;
+  border-bottom: 1px solid #b6b6b6;
   /*
   remember this is for mobile ONLY, so there's no need
   to even declare hover styles here, you can do it in
@@ -1837,12 +1890,12 @@ nav[role="navigation"] .nav li a {
   */
 }
 /* line 423, ../scss/breakpoints/_base.scss */
-nav[role="navigation"] .nav li:last-child a {
+nav[role='navigation'] .nav li:last-child a {
   border: 0;
 }
 /* line 440, ../scss/breakpoints/_base.scss */
-nav[role="navigation"] .nav li ul.sub-menu li a,
-nav[role="navigation"] .nav li ul.children li a {
+nav[role='navigation'] .nav li ul.sub-menu li a,
+nav[role='navigation'] .nav li ul.children li a {
   padding-left: 30px;
 }
 
@@ -1927,7 +1980,7 @@ POSTS & CONTENT STYLES
 }
 /* line 577, ../scss/breakpoints/_base.scss */
 .entry-content tr:nth-child(even) {
-  background-color: #B6B6B6;
+  background-color: #b6b6b6;
 }
 /* line 582, ../scss/breakpoints/_base.scss */
 .entry-content td {
@@ -1940,7 +1993,7 @@ POSTS & CONTENT STYLES
 }
 /* line 591, ../scss/breakpoints/_base.scss */
 .entry-content th {
-  background-color: #B6B6B6;
+  background-color: #b6b6b6;
   border-bottom: 1px solid #727272;
   border-right: 1px solid #727272;
 }
@@ -1952,7 +2005,7 @@ POSTS & CONTENT STYLES
 .entry-content blockquote {
   margin: 0 0 1.5em 0.75em;
   padding: 0 0 0 0.75em;
-  border-left: 3px solid #2196F3;
+  border-left: 3px solid #2196f3;
   font-style: italic;
   color: #9fa6b4;
 }
@@ -1981,7 +2034,7 @@ POSTS & CONTENT STYLES
 /* line 648, ../scss/breakpoints/_base.scss */
 .entry-content pre {
   background: #212121;
-  color: #B6B6B6;
+  color: #b6b6b6;
   font-size: 0.9em;
   padding: 1.5em;
   margin: 0 0 1.5em;
@@ -2050,7 +2103,8 @@ PAGE NAVI STYLES
   border-right: 1px solid #727272;
 }
 /* line 738, ../scss/breakpoints/_base.scss */
-.pagination a, .pagination span {
+.pagination a,
+.pagination span {
   margin: 0;
   text-decoration: none;
   padding: 0;
@@ -2060,11 +2114,14 @@ PAGE NAVI STYLES
   padding: 0.75em;
   min-width: 1em;
   display: block;
-  color: #2196F3;
+  color: #2196f3;
 }
 /* line 750, ../scss/breakpoints/_base.scss */
-.pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-  background-color: #2196F3;
+.pagination a:hover,
+.pagination a:focus,
+.pagination span:hover,
+.pagination span:focus {
+  background-color: #2196f3;
   color: #fff;
 }
 /* line 756, ../scss/breakpoints/_base.scss */
@@ -2073,7 +2130,8 @@ PAGE NAVI STYLES
   color: #5c6b80;
 }
 /* line 760, ../scss/breakpoints/_base.scss */
-.pagination .current:hover, .pagination .current:focus {
+.pagination .current:hover,
+.pagination .current:focus {
   background-color: #fff;
   color: #5c6b80;
 }
@@ -2098,7 +2156,7 @@ COMMENT STYLES
 #comments-title {
   padding: 0.75em;
   margin: 0;
-  border-top: 1px solid #B6B6B6;
+  border-top: 1px solid #b6b6b6;
   /* number of comments span */
 }
 
@@ -2114,7 +2172,7 @@ COMMENT STYLES
   clear: both;
   overflow: hidden;
   padding: 1.5em;
-  border-bottom: 1px solid #B6B6B6;
+  border-bottom: 1px solid #b6b6b6;
   /* vcard */
   /* end .commentlist .vcard */
   /* end children */
@@ -2166,7 +2224,7 @@ COMMENT STYLES
   /* change number for different depth */
 }
 /* line 886, ../scss/breakpoints/_base.scss */
-.comment[class*=depth-] {
+.comment[class*='depth-'] {
   margin-top: 1.1em;
 }
 /* line 890, ../scss/breakpoints/_base.scss */
@@ -2186,7 +2244,7 @@ COMMENT STYLES
 }
 /* line 911, ../scss/breakpoints/_base.scss */
 .comment.even {
-  background: #B6B6B6;
+  background: #b6b6b6;
 }
 
 /* comment meta */
@@ -2222,7 +2280,7 @@ COMMENT FORM STYLES
 /* line 979, ../scss/breakpoints/_base.scss */
 .comment-respond {
   padding: 1.5em;
-  border-top: 1px solid #B6B6B6;
+  border-top: 1px solid #b6b6b6;
 }
 
 /* line 985, ../scss/breakpoints/_base.scss */
@@ -2249,7 +2307,7 @@ COMMENT FORM STYLES
 /* line 1003, ../scss/breakpoints/_base.scss */
 .form-allowed-tags {
   padding: 1.5em;
-  background-color: #B6B6B6;
+  background-color: #b6b6b6;
   font-size: 0.9em;
 }
 
@@ -2286,7 +2344,7 @@ SIDEBARS & ASIDES
 /* line 1046, ../scss/breakpoints/_base.scss */
 #content .widgettitle {
   margin-top: 0;
-  border-bottom: 1px solid #B6B6B6;
+  border-bottom: 1px solid #b6b6b6;
   margin-bottom: 0.75em;
   font-weight: 500;
   line-height: 50px;
@@ -2319,7 +2377,7 @@ FOOTER STYLES
 /* line 1099, ../scss/breakpoints/_base.scss */
 .footer {
   clear: both;
-  color: #B6B6B6;
+  color: #b6b6b6;
   padding-top: 30px;
   float: left;
   width: 100%;
@@ -2331,7 +2389,7 @@ FOOTER STYLES
 /* line 1113, ../scss/breakpoints/_base.scss */
 .footer #footer-logo {
   margin: 15px auto;
-  background-image: url("../images/hope-center-logo.png");
+  background-image: url('../images/hope-center-logo.png');
   background-repeat: no-repeat;
   /* background-size: 90px; */
   height: 116px;
@@ -2349,7 +2407,7 @@ FOOTER STYLES
   display: block;
   padding-top: 15px;
   font-size: 1.75em;
-  font-family: "Cookie";
+  font-family: 'Cookie';
   font: 0/0 serif;
   text-shadow: none;
   color: transparent;
@@ -2361,12 +2419,12 @@ FOOTER STYLES
   display: block;
 }
 /* line 1146, ../scss/breakpoints/_base.scss */
-.footer nav[role="navigation"] .nav li a {
+.footer nav[role='navigation'] .nav li a {
   border-color: #fff;
-  border-color: #B6B6B6;
+  border-color: #b6b6b6;
   font-size: 1em;
   padding-left: 0;
-  color: #2196F3;
+  color: #2196f3;
 }
 
 /*
@@ -2381,8 +2439,8 @@ view.
 /* end .footer-links */
 /* line 1176, ../scss/breakpoints/_base.scss */
 .copyright {
-  color: #B6B6B6;
-  font-size: .8em;
+  color: #b6b6b6;
+  font-size: 0.8em;
   float: left;
   width: 100%;
 }
@@ -2454,19 +2512,22 @@ tweeners.
     /* at this larger size, we can start to align images */
   }
   /* line 85, ../scss/breakpoints/_481up.scss */
-  .entry-content .alignleft, .entry-content img.alignleft {
+  .entry-content .alignleft,
+  .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
   }
   /* line 90, ../scss/breakpoints/_481up.scss */
-  .entry-content .alignright, .entry-content img.alignright {
+  .entry-content .alignright,
+  .entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
   }
   /* line 95, ../scss/breakpoints/_481up.scss */
-  .entry-content .aligncenter, .entry-content img.aligncenter {
+  .entry-content .aligncenter,
+  .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
     display: block;
@@ -2492,7 +2553,7 @@ you can add resource intensive styles.
 @media only screen and (min-width: 600px) {
   /* line 1, ../scss/breakpoints/_600up.scss */
   .one_third {
-    width: calc(96%/3) !important;
+    width: calc(96% / 3) !important;
     margin-right: 2% !important;
   }
 
@@ -2632,24 +2693,24 @@ you can add resource intensive styles.
   }
 
   /* line 118, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] {
+  nav[role='navigation'] {
     display: block !important;
     /* end .nav */
   }
   /* line 122, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav {
+  nav[role='navigation'] .nav {
     border: 0;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
   }
   /* line 124, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav ul {
+  nav[role='navigation'] .nav ul {
     background: #212121;
     margin-top: 0;
   }
   /* line 128, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav li {
+  nav[role='navigation'] .nav li {
     float: left;
     position: relative;
     /*
@@ -2658,9 +2719,9 @@ you can add resource intensive styles.
     /* showing sub-menus */
   }
   /* line 132, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav li a {
+  nav[role='navigation'] .nav li a {
     border-bottom: 0;
-    color: #2196F3;
+    color: #2196f3;
     font-size: 1.2em;
     font-weight: 400;
     margin-right: 10px;
@@ -2672,14 +2733,15 @@ you can add resource intensive styles.
     */
   }
   /* line 144, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav li a:hover, nav[role="navigation"] .nav li a:focus {
+  nav[role='navigation'] .nav li a:hover,
+  nav[role='navigation'] .nav li a:focus {
     color: #fff;
     color: #ff5252;
     text-decoration: none;
   }
   /* line 157, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav li ul.sub-menu,
-  nav[role="navigation"] .nav li ul.children {
+  nav[role='navigation'] .nav li ul.sub-menu,
+  nav[role='navigation'] .nav li ul.children {
     margin-top: 0;
     border: 1px solid #ccc;
     border-top: 0;
@@ -2689,8 +2751,8 @@ you can add resource intensive styles.
     /* highlight sub-menu current page */
   }
   /* line 166, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav li ul.sub-menu li,
-  nav[role="navigation"] .nav li ul.children li {
+  nav[role='navigation'] .nav li ul.sub-menu li,
+  nav[role='navigation'] .nav li ul.children li {
     /*
     if you need to go deeper, go nuts
     just remember deeper menus suck
@@ -2698,8 +2760,8 @@ you can add resource intensive styles.
     */
   }
   /* line 168, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav li ul.sub-menu li a,
-  nav[role="navigation"] .nav li ul.children li a {
+  nav[role='navigation'] .nav li ul.sub-menu li a,
+  nav[role='navigation'] .nav li ul.children li a {
     padding-left: 10px;
     border-right: 0;
     display: block;
@@ -2707,33 +2769,33 @@ you can add resource intensive styles.
     border-bottom: 1px solid #ccc;
   }
   /* line 185, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav li ul.sub-menu li:last-child a,
-  nav[role="navigation"] .nav li ul.children li:last-child a {
+  nav[role='navigation'] .nav li ul.sub-menu li:last-child a,
+  nav[role='navigation'] .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
   /* line 195, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav li ul.sub-menu li ul,
-  nav[role="navigation"] .nav li ul.children li ul {
+  nav[role='navigation'] .nav li ul.sub-menu li ul,
+  nav[role='navigation'] .nav li ul.children li ul {
     top: 0;
     left: 100%;
   }
   /* line 210, ../scss/breakpoints/_768up.scss */
-  nav[role="navigation"] .nav li:hover > ul {
+  nav[role='navigation'] .nav li:hover > ul {
     top: auto;
     visibility: visible;
   }
 
   /* line 229, ../scss/breakpoints/_768up.scss */
   .page header.header {
-    border-bottom: 3px solid #2196F3;
+    border-bottom: 3px solid #2196f3;
   }
   /* line 233, ../scss/breakpoints/_768up.scss */
-  .page nav[role="navigation"] {
+  .page nav[role='navigation'] {
     margin-bottom: 60px;
   }
 
   /* line 239, ../scss/breakpoints/_768up.scss */
-  .home nav[role="navigation"] {
+  .home nav[role='navigation'] {
     margin-bottom: 0;
   }
 
@@ -2795,7 +2857,7 @@ you can add resource intensive styles.
   }
 
   /* line 387, ../scss/breakpoints/_768up.scss */
-  #inner-footer nav[role="navigation"] {
+  #inner-footer nav[role='navigation'] {
     border: 0;
     float: left;
     width: auto;
@@ -2861,7 +2923,9 @@ This applies to the retina iPhone (4s) and iPad (2,3) along with
 other displays with a 2x resolution. You can also create a media
 query for retina AND a certain size if you want. Go Nuts.
 *********************/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
   /******************************************************************
   Site Name: 
   Author: 
@@ -2931,28 +2995,32 @@ be set to display none.
   }
 
   /* line 21, ../scss/partials/_print.scss */
-  a, a:visited {
+  a,
+  a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
   /* line 26, ../scss/partials/_print.scss */
-  a:after, a:visited:after {
-    content: " (" attr(href) ")";
+  a:after,
+  a:visited:after {
+    content: ' (' attr(href) ')';
   }
   /* line 31, ../scss/partials/_print.scss */
-  a abbr[title]:after, a:visited abbr[title]:after {
-    content: " (" attr(title) ")";
+  a abbr[title]:after,
+  a:visited abbr[title]:after {
+    content: ' (' attr(title) ')';
   }
 
   /* line 36, ../scss/partials/_print.scss */
   .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
+  a[href^='javascript:']:after,
+  a[href^='#']:after {
+    content: '';
   }
 
   /* line 42, ../scss/partials/_print.scss */
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
@@ -2963,7 +3031,8 @@ be set to display none.
   }
 
   /* line 51, ../scss/partials/_print.scss */
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid;
   }
 
@@ -2976,7 +3045,9 @@ be set to display none.
     margin: 0.5cm;
   }
   /* line 63, ../scss/partials/_print.scss */
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
