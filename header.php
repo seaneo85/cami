@@ -20,7 +20,7 @@
 
 		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon-32x32.png">
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->
@@ -45,33 +45,41 @@
 		<div id="container">
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			
+				<div id="sidebar-header-container">
+					<?php get_sidebar('header'); ?>
+				</div>
 
 				<div id="inner-header" class="wrap cf">
+				
+					
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 					<p id="logo" class="h1 m-all t-2of3 d-2of3" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
-					<?php get_sidebar('header'); ?>
-					<p id="mobile-nav"><a href="#menu"><i class="fa fa-bars"></i>MENU</a></p>
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-
-					</nav>
+					
+					
 					
 					
 				</div>
+				
+					<p id="mobile-nav"><a href="#menu"><i class="fa fa-bars"></i> MENU</a></p>
+					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<?php wp_nav_menu(array(
+								 'container' => false,                           // remove nav container
+								 'container_class' => '',                 // class of container (should you choose to use it)
+								 'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+								 'menu_class' => 'nav top-nav cf wrap',               // adding custom nav class
+								 'theme_location' => 'main-nav',                 // where it's located in the theme
+								 'before' => '',                                 // before the menu
+								   'after' => '',                                  // after the menu
+								   'link_before' => '',                            // before each link
+								   'link_after' => '',                             // after each link
+								   'depth' => 0,                                   // limit the depth of the nav
+								 'fallback_cb' => ''                             // fallback function (if there is one)
+						)); ?>
+
+					</nav>
 				
 				<?php if( is_home() || is_front_page() ) :
 					if ( has_post_thumbnail() ) { ?>

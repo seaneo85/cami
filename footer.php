@@ -1,6 +1,8 @@
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
 				<div id="inner-footer" class="wrap cf">
+				
+					<p id="footer-logo" class="h1 m-all t-2of3 d-2of3" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
 					<nav role="navigation">
 						<?php wp_nav_menu(array(

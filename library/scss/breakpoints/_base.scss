@@ -16,12 +16,15 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $raleway;
 	font-size: 100%;
-	line-height: 1.5;
-	color: $text-color;
+	line-height: 1.5em;
+	color: $black;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
+	font-size: 18px;
+	
 }
 
 /********************
@@ -30,7 +33,77 @@ style a page via class
 ********************/
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
+.home {
+
+	.content-column {
+		
+		
+		ul {
+			list-style-type: none;
+			padding-left: 5px;
+			
+			
+		}
+		
+		ul.icons {
+			list-style-type: none;
+			padding-left: 5px;
+			
+			li {
+				position: relative;
+				margin-left: 30px;
+			
+		
+				.fa {
+					margin-right: 10px;
+					color: $blue-blue;
+					position: absolute;
+					left: -30px;
+					top: 4px;
+				}
+			
+			}
+		}
+		
+		ul.icons.red {
+			li .fa {
+				color: $red;
+			}
+		}
+	}
+	
+	.services .content-column {
+		background-color: white;
+		padding: 0 0 15px;
+		border: 1px solid #b6b6b6;
+		box-shadow: 2px 0px 4px #E6E6E6;
+	}
+	
+		.services-content {
+			padding: 0 15px 0;
+			margin-top: -10px;
+		
+
+			p {
+				margin-bottom: 10px;
+			}
+
+			ul.icons {
+				margin-top: 0;
+				margin-bottom: 0;
+			
+
+				.services-content ul.icons li {
+					font-weight: 500;
+				}
+			}
+		}
+	
+	.contact {
+		margin: 0;
+	}
+
+}                          /* home page */
 .blog {}                          /* blog template page */
 .archive {}                       /* archive page */
 .date {}                          /* date archive page */
@@ -103,12 +176,20 @@ a, a:visited {
 	
 	&.button {
 		display: inline-block;
-		background-color: #f01d4f;
+		background-color: $red;
 		color: white;
-		padding: 3px;
+		padding: 10px 15px;
+		border-radius: 5px;
 		text-decoration: none;
 		margin-bottom: 20px;
+		@include transition(all 0.2s ease-in-out);
+		
+		&:hover {
+			background-color: lighten($red, 9%);
+		}		
 	}
+	
+	
 }
 
 /******************************************************************
@@ -118,6 +199,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
+	color: $black;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -130,12 +212,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 2em;
 	line-height: 1.333em;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
+	font-size: 1.5em;
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
 }
@@ -160,19 +242,27 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
+header.header[roler="banner"] {
+	margin-bottom: 0;
+}
+
 .header {
 	background-color: $white;
 	float: left;
 	width: 100%;
+	margin-bottom: 20px;
+	
+	#sidebar-header-container {
+		border-bottom: 1px solid $divider;
+	}
 	
 	.sidebar {
-		margin: 0;
+		margin: 0 auto;
+		float: none;
 	}
 	
 	.widget {
 		margin: 0;
-		border-top: 1px solid rgba(81, 88, 96, 1);
-		padding: 15px 0 0;
 	}
 	
 	.widgettitle {
@@ -208,26 +298,39 @@ HEADER STYLES
 } /* end .header */
 
 	#logo {
-		  margin: 0;
-		  background-image: url("../images/Butterfly.png");
-		  background-repeat: no-repeat;
-		  background-size: 90px;
-		  height: 110px;
-		  background-position: 0px 10px;
-		  font-size: 1.5em;
+		margin: 15px auto;
+		background-image: url("../images/hope-center-logo.png");
+		background-repeat: no-repeat;
+		/* background-size: 90px; */
+		height: 116px;
+		/* background-position: 0px 10px; */
+		/* font-size: 1.5em; */
+		float: none;
+		width: 402px;
+
 
 		a {
 			padding-left: 110px;
-		  color: $blue;
-		  display: block;
-		  padding-top: 15px;
-		  font-size: 1.75em;
-		  font-family: "Cookie";
+			color: #517398;
+			display: block;
+			padding-top: 15px;
+			font-size: 1.75em;
+			font-family: "Cookie";
+			font: 0/0 serif;
+			text-shadow: none;
+			color: transparent;
+			width: 100%;
+			height: 100%;
 		  }
 	}
 	
 	#hero {
 		position: relative;
+		float: left;
+		width: 100%;
+		margin-top: 10px;
+		border-top: 5px solid $blue-blue;
+		border-bottom: 5px solid $blue-blue;
 		
 		img {
 			width: 100%;
@@ -237,12 +340,11 @@ HEADER STYLES
 		
 		#description {
 			bottom: 0;
-			color: white;
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: $light-blue;
 			width: 100%;
 			padding: 7px;
-			margin: 0 0 10px 0;
-			
+			margin: 0;
+			font-size: 1.1em;
 			position: static;
 			display: block;
 		}
@@ -267,11 +369,10 @@ and more scalable.
 #mobile-nav {
     text-align: center;
     width: 100%;
-    background-color: #252D38;
-    margin-bottom: 10px;
+    background-color: $red;
+    margin-bottom: 0;
     margin-top: 0;
     padding: 10px 0;
-    border-top: 2px solid rgb(27, 32, 40);
 	float: left;
 	
 		a {
@@ -285,23 +386,25 @@ and more scalable.
 		}
 }
 
-nav {
+nav[role="navigation"] {
 	display: none;
 	margin: 0;
 	width: 100%;
 	float: left;
 }
 
-	.nav {
+nav[role="navigation"] .nav {
 		border-bottom: 0;
 
 		li {
 
 			a {
 				display: block;
-				color: $white;
+				color: $blue-blue;
 				text-decoration: none;
 				padding: 0.75em;
+				font-weight: 400;
+				border-bottom: 1px solid $divider;
 
 				/*
 				remember this is for mobile ONLY, so there's no need
@@ -316,7 +419,11 @@ nav {
 
 			&:first-child {}
 
-			&:last-child {}
+			&:last-child {
+				a {
+					border: 0;
+				}
+			}
 
 			/*
 			so you really have to rethink your dropdowns for mobile.
@@ -375,14 +482,12 @@ POSTS & CONTENT STYLES
 		.hentry {
 
 			header {
-				border-bottom: 1px solid $light-gray;
-				padding-bottom: 0;
-				padding-top: 1.5em;
 			}
 
 			footer {
 				padding: 1.5em;
-				border-top: 1px solid $blue;
+				border-top: 1px solid $light-blue;
+				display: none;
 
 				p {
 					margin: 0;
@@ -394,7 +499,7 @@ POSTS & CONTENT STYLES
 		.single-title,
 		.page-title,
 		.entry-title {
-			margin: 0;
+			margin-top: 0;
 		}
 
 		.single-title {}
@@ -426,7 +531,6 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding-top: 1.5em;
 
 			p {
 				margin: 0 0 1.5em;
@@ -941,6 +1045,10 @@ SIDEBARS & ASIDES
 
 	.widgettitle {
 		margin-top: 0;
+		border-bottom: 1px solid $divider;
+		margin-bottom: 0.75em;
+		font-weight: 500;
+		line-height: 50px;
 	}
 
 	.widget {
@@ -970,6 +1078,9 @@ SIDEBARS & ASIDES
 			}
 		}
 	}
+	
+	.textwidget {
+	}
 
 	.no-widgets {
 		background-color: $white;
@@ -986,15 +1097,59 @@ FOOTER STYLES
 *********************/
 
 .footer {
-	clear: both;
-	background-color: $black;
-	color: $light-gray;
-	margin-top: 50px;
-	float: left;
-	width: 100%;
+    clear: both;
+    color: #B6B6B6;
+    padding-top: 30px;
+    float: left;
+    width: 100%;
+
+	
+	#inner-footer {
+		ul.nav {
+			margin: 0;
+		}
+	}
+	
+	#footer-logo {
+		    margin: 15px auto;
+			background-image: url("../images/hope-center-logo.png");
+			background-repeat: no-repeat;
+			/* background-size: 90px; */
+			height: 116px;
+			/* background-position: 0px 10px; */
+			/* font-size: 1.5em; */
+			float: left;
+			width: 270px;
+			background-size: 100%;
+			height: 80px;
+		
+		a {
+			padding-left: 110px;
+			color: #517398;
+			display: block;
+			padding-top: 15px;
+			font-size: 1.75em;
+			font-family: "Cookie";
+			font: 0/0 serif;
+			text-shadow: none;
+			color: transparent;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
 	
 	nav {
 		display: block;
+	}
+	
+	nav[role="navigation"] .nav li a {
+		border-color: $white;
+		    border-color: $divider;
+			font-size: 1em;
+			padding-left: 0;
+			color: $blue-blue;
+		
 	}
 }
 
@@ -1018,4 +1173,7 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {}
+	.copyright {color: $divider; font-size: .8em;
+		float: left;
+		width: 100%;
+		}

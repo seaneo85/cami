@@ -237,6 +237,8 @@ and be up and running in seconds.
 */
 function bones_fonts() {
   wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Cookie|Raleway:400,700,300');
+  
+  wp_enqueue_style('FontAwesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');

@@ -25,4 +25,6 @@ return '<a target="' . $target . '" class="button button-'. $size .' button-'. $
     
 add_shortcode('button', 'button_shortcode');
 
+
+
 ?>

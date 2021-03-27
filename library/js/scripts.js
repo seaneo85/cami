@@ -111,7 +111,7 @@ function loadGravatars() {
 jQuery(document).ready(function($) {
 
 $( "#mobile-nav" ).click(function() {
-  $( 'nav[role="navigation"' ).slideToggle( "slow" );
+  $( '.header nav[role="navigation"' ).slideToggle( "slow" );
 });
 
 

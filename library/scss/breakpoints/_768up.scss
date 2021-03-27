@@ -17,10 +17,24 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
-body {}
+body {background-color: #efefef;}
 
 #main {
 	pading-right: 2em;
+}
+
+#content {
+	margin-top: 0;
+	background-color: #efefef;
+	
+	article {
+		background-color: white;
+		padding: 40px 30px;
+		position: relative;
+		top: -60px;
+		border: 1px solid $light-blue;
+		margin-bottom: -60px;
+	}
 }
 
 .hentry {
@@ -29,6 +43,27 @@ body {}
 		
 		border: 0;
 	}
+}
+
+.content-column {
+    color: black;
+    /* margin-right: 10px; */
+    box-sizing: border-box;
+    /* border-right: 10px solid white; */
+    margin-right: 1%;
+}
+
+.content-column.last_column {
+    /* border: 0; */
+}
+
+.one_third {
+    width: 32.6667%;
+}
+
+.one_third.last_column {
+    width: 32.6667%;
+    margin: 0;
 }
 
 /*********************
@@ -44,6 +79,7 @@ HEADER STYLES
 *********************/
 
 .header {
+	margin: 0;
 		
 	.widget {
 		border: 0;
@@ -54,14 +90,20 @@ HEADER STYLES
 	}
 }
 
-	#logo {}
+	#logo { float: left; }
 	
 	#hero {
-		padding-bottom: 10px;
+		margin: 0;
 	
 		#description {
 			position: absolute;
-			margin: 10px 0;
+			background-color: rgba(0, 0, 0, 0.25);
+			padding-bottom: 57px;
+			
+		}
+		
+		#description * {
+			color: white;
 		}
 	}
 
@@ -73,107 +115,131 @@ NAVIGATION STYLES
 	display: none !important;
 }
 
-nav {
+nav[role="navigation"] {
 	display: block !important;
-}
 
-.nav {
-	border: 0;
-	ul {
-		background:$black;
-		margin-top:0;
-	}
-	li {
-		float: left;
-		position: relative;
 
-		a {
-			border-bottom: 0;
+	.nav {
+		border: 0;
+		ul {
+			background:$black;
+			margin-top:0;
+		}
+		li {
+			float: left;
+			position: relative;
+
+			a {
+				border-bottom: 0;
+				color: $blue;
+				font-size: 1.2em;
+				font-weight: 400;
+				margin-right: 10px;
+				@include transition(all 0.2s ease-in-out);
+
+				/*
+				you can use hover styles here even though this size
+				has the possibility of being a mobile device.
+				*/
+				&:hover, &:focus {
+					color: $white;
+					color: $red;
+					text-decoration: none;
+				}
+			}
+
+			&:first-child {}
+			&:last-child {}
 
 			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
+			plan your menus and drop-downs wisely.
 			*/
-			&:hover, &:focus {
-				color: $white;
-				text-decoration: underline;
-			}
-		}
+			ul.sub-menu,
+			ul.children {
+				margin-top: 0;
+				border: 1px solid #ccc;
+				border-top: 0;
+				position: absolute;
+				visibility: hidden;
+				z-index: 8999;
 
-		&:first-child {}
-		&:last-child {}
-
-		/*
-		plan your menus and drop-downs wisely.
-		*/
-		ul.sub-menu,
-		ul.children {
-			margin-top: 0;
-			border: 1px solid #ccc;
-			border-top: 0;
-			position: absolute;
-			visibility: hidden;
-			z-index: 8999;
-
-			li {
-
-				a {
-					padding-left: 10px;
-					border-right: 0;
-					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-				}
-
-				&:first-child {}
-
-				&:last-child {
+				li {
 
 					a {
-						border-bottom: 0;
+						padding-left: 10px;
+						border-right: 0;
+						display: block;
+						width: 180px;
+						border-bottom: 1px solid #ccc;
+
+						&:hover,
+						&:focus {}
+
+						&:link {}
+					}
+
+					&:first-child {}
+
+					&:last-child {
+
+						a {
+							border-bottom: 0;
+						}
+					}
+
+					/*
+					if you need to go deeper, go nuts
+					just remember deeper menus suck
+					for usability. k, bai.
+					*/
+					ul {
+						top:0;
+						left:100%;
 					}
 				}
 
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {
-					top:0;
-					left:100%;
+				/* highlight sub-menu current page */
+				li.current-menu-item,
+				li.current_page_item,
+				li.current_page_ancestor {
+					a {}
 				}
 			}
 
-			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current_page_ancestor {
-				a {}
+			/* showing sub-menus */
+			&:hover > ul {
+				top: auto;
+				visibility:visible;
 			}
-		}
 
-		/* showing sub-menus */
-		&:hover > ul {
-			top: auto;
-			visibility:visible;
-		}
+		} /* end .menu ul li */
 
-	} /* end .menu ul li */
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
+			a {}
+		}  /* end current highlighters */
 
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-		a {}
-	}  /* end current highlighters */
+	} /* end .nav */
+}
 
-} /* end .nav */
+.page {
+
+	header.header {
+		border-bottom: 3px solid $blue;
+	}
+
+	nav[role="navigation"] {
+		margin-bottom: 60px;
+	}
+}
+
+.home {
+	nav[role="navigation"] {
+		margin-bottom: 0;
+	}
+}
 
 /*********************
 SIDEBARS & ASIDES
@@ -183,10 +249,7 @@ SIDEBARS & ASIDES
 	margin-top: 2.2em;
 }
 
-	.widgettitle {
-		border-bottom: 1px solid $blue;
-		margin-bottom: 0.75em;
-	}
+	
 
 	.widget {
 		padding: 0 10px;
@@ -194,7 +257,6 @@ SIDEBARS & ASIDES
 
 		ul {
 			li {
-				margin-bottom: 0.75em;
 
 				&:first-child {}
 				&:last-child {}
@@ -202,7 +264,6 @@ SIDEBARS & ASIDES
 				/* deep nesting */
 
 				ul {
-					margin-top: 0.75em;
 					padding-left: 1em;
 				}
 			}
@@ -307,10 +368,37 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
+
+.footer {
+	background-color: #efefef;
+	
+	ul.nav {
+		margin: 0;
+	}
+	
+	.copyright {
+		width: auto;
+		margin: 0;
+		margin-left: 15px;
+		float: left;
+	}
+}
+
+#inner-footer nav[role="navigation"] {
+		border: 0;
+		float: left;
+		width: auto;
+		margin-left: 10px;
+	}
+
 .footer-links {
+	
+	
 	ul {
 		li {
 			a {
+				padding-bottom: 0;
+			
 				&:hover {}
 			}
 			/*
@@ -321,5 +409,7 @@ mobile. Make sure to double check these!
 			ul {}
 		}
 	}
+	
+	
 } /* end .footer-links */
 
